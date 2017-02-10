@@ -50,7 +50,7 @@ class BraveRightSidePanelViewController : SidePanelBaseViewController {
     let ui_sectionTitleHeight = CGFloat(26)
     let ui_sectionTitleFontSize = CGFloat(15)
     let ui_siteNameSectionHeight = CGFloat(84)
-    let ui_togglesContainerRowHeight = CGFloat(48)
+    let ui_togglesContainerRowHeight = CGFloat(46)
 
     lazy var views_toggles: [UISwitch] = {
         return [self.toggleBlockAds, self.toggleHttpse, self.toggleBlockMalware, self.toggleBlockScripts, self.toggleBlockFingerprinting]

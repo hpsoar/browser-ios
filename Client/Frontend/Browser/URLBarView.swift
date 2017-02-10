@@ -379,7 +379,9 @@ class URLBarView: UIView {
         } else {
             // Copy the current URL to the editable text field, then activate it.
             self.locationTextField?.text = locationText
-            dispatch_async(dispatch_get_main_queue()) {
+
+            // something is resigning the first responder immediately after setting it. A short delay for events to process fixes it.
+            postAsyncToMain(0.1) {
                 self.locationTextField?.becomeFirstResponder()
             }
         }
